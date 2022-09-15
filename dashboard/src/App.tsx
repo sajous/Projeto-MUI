@@ -1,7 +1,13 @@
-export const App = () => {
-  return(
-    <div>
-      
-    </div>
+import { BrowserRouter } from "react-router-dom"
+import { AppRoutes } from "./routes"
+
+
+export const App =() => {
+
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  
   )
 }
