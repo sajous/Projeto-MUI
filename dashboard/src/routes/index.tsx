@@ -1,13 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Button } from '@mui/material';
-import {useAppThemeContext} from '../shared/context';
+import {useDrawerContext} from '../shared/context';
 
 export const AppRoutes = () => {
-  const { toggleTheme } = useAppThemeContext();
+  const { toggleDrawerOpen } = useDrawerContext();
   
   return (
     <Routes>
-      <Route path="/" element={<Button variant='contained' color='primary' onClick={toggleTheme}>TESTE</Button>} />
+      <Route path="/" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>TESTE</Button>} />
 
       <Route path="*" element={<Navigate to="/"/>} />
     </Routes>
